@@ -36,3 +36,23 @@
 
 /* Velikost poděkování v sekci RSVP. */
 .rsvp-intro>p.rsvp-thanks{font-size:15px}
+
+
+/* Jednotná čárová grafika: vzhled nezávisí na emoji fontech telefonu. */
+.ui-icon{display:inline-block;width:1em;height:1em;vertical-align:-.15em;flex-shrink:0;overflow:visible}
+.ui-icon.icon-arrow-up-right{width:1.45em;height:1.45em;stroke-width:1.1}
+.event-icon .ui-icon{vertical-align:middle}
+.gift-note .ui-icon,.success-heart .ui-icon{stroke-width:.7}
+
+/* Úvod se přizpůsobí skutečné šířce telefonu, včetně užších displejů. */
+@media(max-width:760px){
+  .hero-content{width:100%;min-width:0;padding-left:20px;padding-right:20px}
+  .hero h1{font-size:clamp(44px,17.5vw,88px);letter-spacing:-.045em;white-space:normal}
+  .hero h1 .name-connector{margin:0 .08em}
+  .hero-intro{max-width:min(290px,100%)}
+  .hero-intro br{display:none}
+  .timeline>li{grid-template-rows:auto auto auto;row-gap:6px}
+  .timeline h3{margin:0;line-height:1.15}
+  .timeline p{margin:0}
+  .rsvp-form select{font-size:16px}
+}
