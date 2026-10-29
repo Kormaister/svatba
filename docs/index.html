@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#9DAC97">
+  <meta name="description" content="Alena a Dan. 17. července 2027, Souvrať 81. Program svatby, praktické informace a potvrzení účasti.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Alena & Dan — naše ano</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      document.documentElement.classList.add('invitation-pending');
+      // Při selhání načtení úvodního skriptu zůstane web dostupný.
+      window.weddingInvitationFallback = setTimeout(() => {
+        document.documentElement.classList.remove('invitation-pending');
+        const intro = document.getElementById('wedding-invitation');
+        const site = document.getElementById('wedding-site');
+        if (intro) intro.hidden = true;
+        if (site) site.inert = false;
+      }, 12000);
+    })();
+  </script>
+  <link rel="preload" href="./assets/invitation/sage-paper.webp" as="image">
+  <link rel="preload" href="./assets/invitation/wax-seal.webp" as="image">
+  <link rel="preload" href="./assets/eucalyptus-real-left.webp" as="image">
+  <link rel="preload" href="./assets/eucalyptus-real-right.webp" as="image">
+  <link rel="stylesheet" href="./styles.css?v=20261029-9">
+  <link rel="stylesheet" href="./invitation.css?v=20261029-3">
+  <script defer src="./wedding-config.js"></script>
+  <script defer src="./app.js?v=20261029-5"></script>
+  <script defer src="./countdown.js?v=20261029-1"></script>
+  <script defer src="./invitation.js?v=20261029-3"></script>
+</head>
+<body>
+  <div class="invitation" id="wedding-invitation" role="dialog" aria-modal="true" aria-labelledby="invitation-title" hidden>
+    <button class="invitation-skip" type="button">Přejít rovnou na web ↗</button>
+    <div class="invitation-content">
+      <div class="invitation-heading"><h2 id="invitation-title">Zveme vás <em>k našemu ano.</em></h2></div>
+      <div class="envelope-stage">
+        <div class="envelope-back" aria-hidden="true"></div>
+        <div class="invitation-letter" aria-hidden="true">
+          <span class="letter-kicker">Budeme se brát</span>
+          <p class="letter-names"><span data-name="0">Alena</span> <span class="ampersand">&amp;</span> <span data-name="1">Dan</span></p>
+          <span class="letter-rule"></span><p class="letter-date" data-date-long>17. července 2027</p><p class="letter-venue" data-venue>Souvrať 81</p>
+        </div>
+        <div class="envelope-pocket" aria-hidden="true"><span class="paper-fold paper-fold-left"></span><span class="paper-fold paper-fold-right"></span><span class="paper-fold paper-fold-bottom"></span><svg class="envelope-seams" viewBox="0 0 590 373.4" preserveAspectRatio="none" fill="none"><path d="M0 373.4 295 168 590 373.4" stroke="#5c6a4e" stroke-opacity=".28" stroke-width="1"/><path d="M0 372.2 295 166.8 590 372.2" stroke="#f8f9e7" stroke-opacity=".35" stroke-width=".7"/></svg></div>
+        <div class="envelope-flap" aria-hidden="true"><span class="envelope-flap-paper"></span></div>
+        <button class="envelope-open" type="button" aria-label="Otevřít svatební pozvánku"><img class="seal-art" src="./assets/invitation/wax-seal.webp" alt="" width="300" height="300"><span class="seal-monogram" aria-hidden="true">A<span class="ampersand">&amp;</span>D</span></button>
+      </div>
+      <div class="invitation-caption"><button class="invitation-open-text" type="button">Klikněte na pečeť <span aria-hidden="true">↗</span></button><p>Uvnitř na vás čeká náš velký den.</p></div>
+    </div>
+  </div>
+  <div class="wedding-site" id="wedding-site" tabindex="-1">
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <header class="site-header">
+    <a class="monogram" href="#" aria-label="Zpět na úvod" data-monogram>A<span class="ampersand">&amp;</span>D</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Otevřít menu"><span></span><span></span></button>
+    <nav id="navigation" aria-label="Hlavní navigace">
+      <a href="#fotografie">Naše chvíle</a><a href="#program">Svatební den</a><a href="#informace">Dobré vědět</a><a class="nav-rsvp" href="#rsvp">Budete u toho? <span>↗</span></a>
+    </nav>
+  </header>
+  <main id="obsah">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-botanical botanical-left" src="./assets/eucalyptus-real-left.webp" decoding="async" alt="" width="460" height="700">
+      <img class="hero-botanical botanical-right" src="./assets/eucalyptus-real-right.webp" decoding="async" alt="" width="460" height="700">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Jedno velké ano <span></span></p>
+        <h1 id="hero-title"><span data-name="0">Alena</span> <span class="name-connector ampersand">&amp;</span> <span data-name="1">Dan</span></h1>
+        <p class="hero-intro">Některé chvíle chceme prožít se všemi,<br>které máme rádi. Tahle je jednou z nich.</p>
+        <div class="date-line"><span class="date-rule"></span><p data-date-long>17. července 2027</p><span class="date-rule"></span></div>
+        <p class="hero-location"><span class="pin-icon" aria-hidden="true">⌖</span> <span data-venue>Souvrať 81</span></p>
+        <a class="button button-dark" href="#rsvp">Přijdu to s vámi oslavit <span aria-hidden="true">↗</span></a>
+        <a class="hero-scroll" href="#fotografie">Naše chvíle <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+    <section class="countdown-ribbon" aria-labelledby="countdown-title" data-wedding-countdown data-countdown-to="2027-07-17T11:00:00+02:00">
+      <div class="countdown-copy"><h2 id="countdown-title" data-countdown-heading>Do našeho ano zbývá</h2></div>
+      <div class="countdown-clock" role="timer" aria-live="off" aria-label="Čas do svatby">
+        <div class="countdown-unit"><strong class="countdown-number" data-countdown-part="days">—</strong><span data-countdown-label="days">dní</span></div>
+        <div class="countdown-unit"><strong class="countdown-number" data-countdown-part="hours">—</strong><span data-countdown-label="hours">hodin</span></div>
+        <div class="countdown-unit"><strong class="countdown-number" data-countdown-part="minutes">—</strong><span data-countdown-label="minutes">minut</span></div>
+        <div class="countdown-unit"><strong class="countdown-number" data-countdown-part="seconds">—</strong><span data-countdown-label="seconds">sekund</span></div>
+      </div>
+    </section>
+    <section class="moments section-wrap" id="fotografie" aria-labelledby="moments-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / Naše chvíle</p><h2 id="moments-title">Dvě chvíle.<br><em>Jeden společný příběh.</em></h2></div><p>První rande. Zásnuby.<br>A teď se těšíme na naše ano.</p></div>
+      <div class="photo-grid">
+        <figure class="photo-card"><div class="photo-slot" data-photo="firstDate"><div class="photo-placeholder"><span aria-hidden="true">♡</span><p>Naše první rande</p><small>Fotografii brzy doplníme.</small></div></div><figcaption><h3>Tady to začalo.</h3><p>První rande</p></figcaption></figure>
+        <figure class="photo-card"><div class="photo-slot" data-photo="engagement"><div class="photo-placeholder"><span aria-hidden="true">⚭</span><p>Naše zásnuby</p><small>Fotografii brzy doplníme.</small></div></div><figcaption><h3>A tady zaznělo ano.</h3><p>Zásnuby</p></figcaption></figure>
+      </div>
+    </section>
+    <section class="program" id="program" aria-labelledby="program-title">
+      <div class="section-wrap"><div class="section-heading"><div><p class="eyebrow">02 / Svatební den</p><h2 id="program-title">Jeden den.<br><em>Tolik hezkých chvil.</em></h2></div><p>Na čase tolik nezáleží.<br>Na tom, že tam budete, ano.</p></div>
+        <ol class="timeline"><li><span class="event-icon" aria-hidden="true">☀</span><time datetime="2027-07-17T10:00:00+02:00">10:00</time><h3>Vítejte u nás</h3><p>Příjezd hostů pozvaných na obřad. Čas na přivítání a první objetí.</p></li><li><span class="event-icon" aria-hidden="true">⚭</span><time datetime="2027-07-17T11:00:00+02:00">11:00</time><h3>Naše ano</h3><p>Svatební obřad. Ta chvíle, kdy začíná naše další kapitola.</p></li><li><span class="event-icon" aria-hidden="true">♧</span><time datetime="2027-07-17T12:30:00+02:00">12:30</time><h3>Ke společnému stolu</h3><p>Společný oběd pro hosty pozvané na dopolední část.</p></li><li><span class="event-icon" aria-hidden="true">♡</span><time datetime="2027-07-17T15:00:00+02:00">15:00</time><h3>Oslava se rozrůstá</h3><p>Vítáme hosty pozvané na odpolední oslavu. Teď už slavíme všichni spolu.</p></li><li><span class="event-icon" aria-hidden="true">✧</span><time datetime="2027-07-17T17:00:00+02:00">17:00</time><h3>Sladká chvíle</h3><p>Krájení svatebního dortu. Na každého čeká kousek radosti.</p></li><li><span class="event-icon" aria-hidden="true">⌂</span><time datetime="2027-07-17T18:00:00+02:00">18:00</time><h3>Pod širým nebem</h3><p>Stavění stanů pro ty, kteří s námi zůstanou přes noc.</p></li><li><span class="event-icon" aria-hidden="true">♫</span><time datetime="2027-07-17T19:00:00+02:00">19:00</time><h3>První společný tanec</h3><p>My dva otevřeme parket. Vy nám ho pak pomůžete zaplnit.</p></li><li><span class="event-icon" aria-hidden="true">✦</span><time datetime="2027-07-17T21:00:00+02:00">21:00</time><h3>Volná zábava</h3><p>Tanec, smích a společné chvíle. Slavíme dál, dokud nám budou síly stačit.</p></li></ol><p class="program-note">Řiďte se prosím svou pozvánkou: hosté na obřad přijíždějí v 10:00, hosté na odpolední oslavu v 15:00.</p>
+      </div>
+    </section>
+    <section class="information section-wrap" id="informace" aria-labelledby="info-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / Dobré vědět</p><h2 id="info-title">Ať si den užijete<br><em>bez starostí.</em></h2></div><p>Všechno důležité na jednom místě.<br>O zbytek se postaráme společně.</p></div>
+      <div class="info-grid">
+        <article id="misto"><span class="info-number">01</span><h3>Tady si řekneme ano</h3><p><strong data-venue>Souvrať 81</strong><br><span data-address>544 75 Mostek</span></p><p>Obřad i oslava budou na jednom místě. Zaparkovat můžete přímo u nás.</p><a data-map-link class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Souvra%C5%A5%2081%2C%20Mostek" target="_blank" rel="noopener noreferrer">Otevřít navigaci <span>↗</span></a></article>
+        <article><span class="info-number">02</span><h3>Noc pod hvězdami</h3><p>Na místě nabízíme přespání pouze ve stanech. V 18:00 si pro ně společně připravíme zázemí.</p><p>Pokud dáváte přednost posteli, ubytování v okolí si prosím rezervujte sami. Ve formuláři nám dejte vědět, jak to plánujete.</p><a href="#rsvp" class="text-link">Dám vědět, kde přespím <span>↗</span></a></article>
+        <article><span class="info-number">03</span><h3>Oslavme to v barvách</h3><p>Vezměte si barvy, ve kterých je vám dobře. Jemné, veselé i výrazné — všechny jsou vítané.</p><p>Jen černou a bílou tentokrát prosím nechte doma. A myslete na pohodlné boty a něco na večer.</p></article>
+      </div>
+      <div class="venue-map"><div class="map-caption"><p class="eyebrow">Všechny cesty vedou za námi</p><p>Souvrať 81, Mostek <span>Parkování přímo na místě.</span></p></div><iframe title="Mapa místa svatby — Souvrať 81, Mostek" src="https://www.google.com/maps?q=Souvra%C5%A5%2081%2C%20Mostek&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a data-map-link href="https://www.google.com/maps/search/?api=1&amp;query=Souvra%C5%A5%2081%2C%20Mostek" class="map-fallback" target="_blank" rel="noopener noreferrer">Otevřít mapu v novém okně ↗</a></div>
+      <aside class="gift-note"><span aria-hidden="true">♡</span><div><p class="eyebrow">Kdybyste nás chtěli obdarovat</p><h3>Na malé radosti.<br><em>A velké společné plány.</em></h3><p>Váš úsměv a společný čas jsou pro nás tím nejhezčím dárkem. Pokud nám přesto chcete něco přibalit do společného života, potěší nás příspěvek v obálce — na malé radosti, velké plány a všechno krásné, co teprve přijde.</p></div></aside>
+      <div class="faq"><h3>Možná vás ještě napadlo…</h3><div class="faq-items"><details><summary>Kdy máme dorazit?<span aria-hidden="true">+</span></summary><p>Pokud jste pozvaní na obřad, těšíme se na vás v 10:00. Obřad začne v 11:00. Hosty pozvané na odpolední oslavu přivítáme v 15:00. Rozhodující je čas na vaší pozvánce.</p></details><details><summary>Můžeme přijet s dětmi nebo doprovodem?<span aria-hidden="true">+</span></summary><p>Ano, partneři i děti jsou vítaní. Vyplňte prosím ve formuláři jména všech, kteří dorazí s vámi. Jednou odpovědí tak můžete potvrdit účast celé rodiny.</p></details><details><summary>Kde můžeme přespat?<span aria-hidden="true">+</span></summary><p>Přímo na místě je možné přespat pouze ve stanech. Pokud chcete jiné ubytování, v okolí jsou další možnosti — rezervaci i úhradu si prosím zařiďte sami.</p></details></div></div>
+    </section>
+    <div class="date-ribbon"><span>Uložte si datum</span><span class="ribbon-flower" aria-hidden="true">✳</span><strong data-date-numeric>17 / 07 / 2027</strong><span class="ribbon-flower" aria-hidden="true">✳</span><a href="#" data-calendar-download>Přidat do kalendáře <span aria-hidden="true">↗</span></a></div>
+    <section class="rsvp-section" id="rsvp" aria-labelledby="rsvp-title"><div class="rsvp-leaf" aria-hidden="true"><img src="./assets/eucalyptus-real-left.webp" decoding="async" loading="lazy" width="460" height="700" alt=""></div><div class="rsvp-inner section-wrap"><div class="rsvp-intro"><p class="eyebrow">04 / Budete u toho?</p><h2 id="rsvp-title">U našeho stolu<br>je místo <em>pro vás.</em></h2><p>Dejte nám vědět, jestli s vámi můžeme počítat.<br> A pár drobností, které nám pomohou<br> připravit den, na který budeme rádi vzpomínat.</p><p class="rsvp-thanks">Děkujeme, že jste součástí našeho příběhu.</p></div>
+      <form id="rsvp-form" class="rsvp-form">
+        <div class="form-topline"><span>Vaše odpověď</span><span>♡</span></div>
+        <fieldset class="attendance"><legend>Dorazíte to s námi oslavit? <span aria-label="povinné">*</span></legend><div class="choice-row"><label><input type="radio" name="attending" value="yes" required checked><span><b>♡</b> S radostí dorazím</span></label><label><input type="radio" name="attending" value="no"><span>Tentokrát nemohu</span></label></div></fieldset>
+        <div class="form-row"><label>Jméno a příjmení <span>*</span><input name="name" minlength="2" autocomplete="name" placeholder="Jak vám máme říkat?" required maxlength="120"></label><label>E-mail <span>*</span><input type="email" name="email" autocomplete="email" placeholder="vas@email.cz" required maxlength="254"></label></div>
+        <div id="attendance-details"><fieldset class="guest-fieldset"><legend>Kdo přijde s vámi?</legend><p class="field-help">Partneři i děti jsou vítaní. Přidejte jména všech, kteří přijdou s vámi.</p><div id="guest-list"></div><button class="add-guest" id="add-guest" type="button"><span>+</span> Přidat doprovod</button></fieldset>
+        <label class="stay-label">Jak to plánujete s přespáním?<select name="stay"><option value="undecided">Ještě nevíme</option><option value="tent">Přespíme ve stanu na místě</option><option value="nearby">Ubytování v okolí si zařídíme sami</option><option value="home">Po oslavě pojedeme domů</option></select></label><p class="field-help stay-help">Na místě je možné přespat pouze ve stanu. Jiné ubytování si prosím rezervujte sami.</p></div>
+        <label class="note-label">Co vás dostane na parket? <small>(nepovinné)</small><input name="song" maxlength="200" placeholder="Název písničky a interpret"></label>
+        <div class="honeypot" aria-hidden="true"><label>Web<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <p class="privacy-note">Údaje použijeme jen pro organizaci svatby. Pole označená * jsou povinná.</p>
+        <button class="button button-dark submit-button" type="submit"><span>Odeslat naši odpověď</span><span aria-hidden="true">↗</span></button>
+        <p id="form-message" role="status" aria-live="polite" tabindex="-1"></p>
+      </form><div id="rsvp-success" class="success-card" hidden><div class="success-heart">♡</div><p class="eyebrow">Odpověď je uložená</p><h3>Děkujeme <em>za zprávu.</em></h3><p id="success-copy">Už teď se na vás těšíme.</p><p class="receipt" id="receipt"></p><button class="text-link" id="another-response" type="button">Vyplnit další odpověď <span>↗</span></button></div>
+    </div></section>
+    <section class="contacts section-wrap" id="kontakt" aria-labelledby="contact-title"><div><p class="eyebrow">Jsme tu pro vás</p><h2 id="contact-title">Cokoli potřebujete,<br><em>ozvěte se nám.</em></h2></div><div class="contact-grid"><article><h3>Daniel Korych</h3><a href="tel:+420732619464">732 619 464</a><a href="mailto:korych.daniel@gmail.com">korych.daniel@gmail.com</a></article><article><h3>Alena Šrámková</h3><a href="tel:+420731950960">731 950 960</a><a href="mailto:sramkova.alus@seznam.cz">sramkova.alus@seznam.cz</a></article></div></section>
+    <section class="closing"><span class="closing-star" aria-hidden="true">✳</span><p>To nejhezčí na našem dni?</p><h2>Že ho prožijeme <em>s vámi.</em></h2><span class="closing-date" data-date-long>17. července 2027</span></section>
+  </main>
+  <footer><a class="monogram" href="#" data-monogram>A<span class="ampersand">&amp;</span>D</a><p>S láskou a trochou eukalyptu.</p><button class="invitation-replay" id="invitation-replay" type="button">Znovu otevřít pozvánku</button><a href="#">Zpět nahoru ↑</a></footer>
+  <aside class="demo-badge" id="demo-badge"><span></span>Pracovní náhled</aside>
+  </div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+/* Fyzické vrstvy obálky: papír, přehyby, chlopeň a vosková pečeť. */
+html.invitation-pending,
+html.invitation-pending body { overflow: hidden; }
+html.invitation-pending:not(.invitation-transitioning) .wedding-site { visibility: hidden; }
+/* Pouze neinteraktivní cíl po zavření obálky; ovládací prvky si ponechávají obrysy. */
+.wedding-site:focus { outline: none; }
+.invitation {
+  --paper-texture: url('./assets/invitation/sage-paper.webp');
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  min-height: 100svh;
+  overflow: hidden auto;
+  display: grid;
+  place-items: safe center;
+  color: var(--ink);
+  background: radial-gradient(ellipse at 45% 32%, #fffdf8 0%, #f2efe7 70%, #e8e7dd 100%);
+}
+.invitation::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .15;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%237c705b' opacity='.22' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+}
+.invitation-skip {
+  position: absolute;
+  z-index: 10;
+  top: max(24px, env(safe-area-inset-top));
+  right: max(30px, env(safe-area-inset-right));
+  border: 0;
+  border-bottom: 1px solid #aab6a0;
+  padding: 6px 0;
+  background: transparent;
+  font-size: 12px;
+  color: #5b6e57;
+}
+.invitation-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 28px 32px;
+  text-align: center;
+}
+.invitation-heading { position: relative; z-index: 1; }
+.invitation-heading .eyebrow { font-size: 10px; letter-spacing: 3px; }
+.invitation-heading h2 { margin-top: 14px; font-size: clamp(38px, 4.4vw, 56px); }
+.invitation-heading h2 em { font-style: italic; }
+.envelope-stage {
+  position: relative;
+  isolation: isolate;
+  width: min(590px, calc(100vw - 72px), calc((100svh - 380px) * 1.58));
+  aspect-ratio: 1.58;
+  margin-top: 72px;
+  perspective: 1600px;
+  transform: rotate(-3deg);
+}
+.envelope-stage::after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  inset: 24% 1% -10% 5%;
+  background: #4b4838;
+  opacity: .22;
+  filter: blur(23px);
+  transform: translate(12px, 14px) rotate(1deg);
+}
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border: 1px solid #929e85;
+  border-radius: 3px;
+  background-color: #aab59e;
+  background-image: linear-gradient(160deg, #3b4c3226, #76826b0d 65%, #eff2e71c), var(--paper-texture);
+  background-size: auto, 450px 450px;
+  box-shadow: 0 2px 1px #69735977, 1px 6px 5px #5c5c422b, 12px 24px 38px #4d4b3712;
+}
+.envelope-back::after { content: ''; position: absolute; inset: 2px; border: 1px solid #e8eddb22; border-radius: 2px; }
+.invitation-letter {
+  position: absolute;
+  z-index: 1;
+  inset: 4.5% 5.5% 3.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e8e2d3;
+  background-color: #fffdf6;
+  background-image: linear-gradient(#fffdf6ed, #fffdf6ed), var(--paper-texture);
+  background-size: auto, 350px 350px;
+  box-shadow: 0 1px 0 #c6c4b5, 0 7px 14px #3e49351a;
+  padding: 24px;
+}
+.invitation-letter::before { content: ''; position: absolute; inset: 15px; border: 1px solid #cdd4bf; }
+.letter-kicker { font-size: clamp(7px, 1.3vw, 10px); letter-spacing: 3px; text-transform: uppercase; color: var(--sage-dark); }
+.letter-names { font-family: var(--serif); font-size: clamp(34px, 6.3vw, 64px); line-height: 1.2; margin: 19px 0 12px; color: #515d48; }
+.letter-names .ampersand { font-family: var(--amp-serif); font-size: .6em; color: var(--sage-dark); margin: 0 5px; }
+.letter-rule { width: 35px; height: 1px; background: #b4c0a7; margin: 0 0 12px; }
+.letter-date { font-family: var(--serif); font-size: clamp(16px, 2.5vw, 23px); }
+.letter-venue { font-size: 10px; color: #7a8471; letter-spacing: 1.2px; margin-top: 5px; }
+.envelope-pocket { position: absolute; z-index: 3; inset: 0; pointer-events: none; }
+.envelope-seams { position: absolute; inset: 0; width: 100%; height: 100%; }
+.paper-fold {
+  position: absolute;
+  inset: 0;
+  background-color: #aab59e;
+  background-size: auto, 450px 450px;
+}
+.paper-fold-left {
+  clip-path: polygon(0 0, 54% 57%, 0 100%);
+  background-image: linear-gradient(110deg, #f7f8ed30, #ffffff03 64%, #414d3533), var(--paper-texture);
+}
+.paper-fold-right {
+  clip-path: polygon(100% 0, 46% 57%, 100% 100%);
+  background-image: linear-gradient(248deg, #ffffff15, #5660461c 75%, #46513733), var(--paper-texture);
+}
+.paper-fold-bottom {
+  clip-path: polygon(0 100%, 0 97%, 49.5% 45%, 50.5% 45%, 100% 97%, 100% 100%);
+  background-image: linear-gradient(175deg, #f9fbed3d, #d7e1c712 80%, #42533318), var(--paper-texture);
+  box-shadow: inset 0 -1px 0 #67735661;
+  filter: drop-shadow(0 -1px 1px #48523d4d);
+}
+.envelope-flap {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58%;
+  transform-origin: center top;
+  filter: drop-shadow(0 3px 2px #35412845);
+  backface-visibility: visible;
+}
+.envelope-flap-paper {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, 100% 0, 50.7% 98%, 50% 98.5%, 49.3% 98%);
+  background-color: #aab59e;
+  background-image: linear-gradient(175deg, #ffffff3b, #ffffff15 60%, #53624417), var(--paper-texture);
+  background-size: auto, 450px 450px;
+  box-shadow: inset 0 1px 1px #f8fbea77;
+}
+.envelope-open {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: 55%;
+  width: 99px;
+  height: 99px;
+  padding: 0;
+  border: 1px solid #65785a;
+  border-radius: 48% 52% 46% 54% / 51% 45% 55% 49%;
+  color: #b5c3a1;
+  background: radial-gradient(circle at 32% 24%, #8c9a7a, #647954 65%, #536745);
+  box-shadow: inset 0 0 0 3px #8c9b7b, inset 0 0 0 5px #647952, 2px 5px 5px #35432b4d;
+  transform: translate(-50%, -50%) rotate(7deg);
+  transition: filter .25s;
+}
+.envelope-open::before { content: ''; position: absolute; inset: 13px; border: 1px solid #b9c5a766; border-radius: 50%; }
+.envelope-open:hover { filter: brightness(1.06); }
+.seal-art { position: absolute; inset: -10%; width: 120%; height: 120%; object-fit: contain; opacity: 0; filter: drop-shadow(2px 5px 3px #26301c38); pointer-events: none; }
+.seal-ready { border-color: transparent; background: transparent; box-shadow: none; }
+.seal-ready::before { display: none; }
+.seal-ready .seal-art { opacity: 1; }
+.seal-ready .seal-monogram { opacity: 0; }
+.seal-monogram { display: block; font-family: var(--serif); font-size: 29px; letter-spacing: -2px; line-height: 1; transform: rotate(-7deg); text-shadow: -1px -1px 1px #3c4e2c, 1px 1px 1px #bdc9a666; }
+.seal-monogram .ampersand { font-family: var(--amp-serif); font-size: .65em; margin: 0 2px; }
+.invitation-caption { position: relative; z-index: 1; margin-top: 30px; }
+.invitation-open-text { border: 0; padding: 8px 10px; min-height: 44px; background: transparent; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #5b6e57; }
+.invitation-open-text span { margin-left: 10px; }
+.invitation-caption p { margin-top: 3px; font-family: var(--serif); font-style: italic; font-size: 19px; color: #7c8672; }
+.invitation-opening .envelope-open { pointer-events: none; animation: seal-break .55s cubic-bezier(.4, 0, .7, .2) forwards; }
+.invitation-opening .envelope-flap { animation: flap-open 1.45s .25s cubic-bezier(.4, 0, .2, 1) forwards; }
+.invitation-opening .invitation-letter { animation: letter-emerge 1.7s 1.05s cubic-bezier(.22, .61, .36, 1) forwards; }
+.invitation-opening .invitation-heading,
+.invitation-opening .invitation-caption { animation: invitation-copy-away .45s ease forwards; }
+.invitation-opening { animation: invitation-away .75s 3.15s ease-in-out forwards; }
+.invitation-opening .envelope-stage { animation: envelope-settle .75s 3.15s ease-in-out forwards; }
+.invitation-revealed { animation: wedding-arrive .65s ease-out both; }
+.invitation-replay { padding: 5px 0; border: 0; border-bottom: 1px solid #c6cfbd; background: transparent; color: #6b7862; font-size: 11px; }
+footer { flex-wrap: wrap; gap: 18px; }
+@keyframes seal-break { to { opacity: 0; transform: translate(-39%, -85%) rotate(20deg) scale(1.09); } }
+@keyframes flap-open { 0% { transform: rotateX(0); z-index: 5; } 49% { z-index: 5; } 50%, 100% { z-index: 0; } 100% { transform: rotateX(-180deg); filter: drop-shadow(0 -1px 1px #35412820); } }
+@keyframes letter-emerge { 0% { transform: translateY(0); } 70% { transform: translateY(-56%); } 100% { transform: translateY(-53%); } }
+@keyframes invitation-copy-away { to { opacity: 0; transform: translateY(-8px); } }
+@keyframes invitation-away { to { opacity: 0; } }
+@keyframes envelope-settle { to { transform: translateY(24px) rotate(-1deg) scale(1.015); } }
+@keyframes wedding-arrive { from { opacity: .8; } to { opacity: 1; } }
+@media (max-width: 600px) {
+  .invitation-content { padding: 80px 24px 38px; }
+  .invitation-skip { top: max(20px, env(safe-area-inset-top)); right: 24px; font-size: 11px; }
+  .invitation-heading { max-width: 330px; }
+  .invitation-heading .eyebrow { font-size: 9px; letter-spacing: 2.5px; }
+  .envelope-stage { width: calc(100vw - 64px); margin-top: 76px; }
+  .envelope-open { width: 75px; height: 75px; }
+  .seal-monogram { font-size: 24px; }
+  .letter-names { margin-top: 10px; margin-bottom: 6px; }
+  .letter-rule { margin-bottom: 7px; }
+  .letter-venue { font-size: 8px; }
+  .invitation-letter { padding: 15px; }
+  .invitation-letter::before { inset: 9px; }
+  .invitation-caption { margin-top: 38px; }
+  .invitation-caption p { font-size: 18px; }
+}
+@media (max-height: 650px) and (min-width: 601px) {
+  .invitation-content { padding-top: 55px; padding-bottom: 24px; }
+  .invitation-heading h2 { font-size: 36px; margin-top: 7px; }
+  .envelope-stage { width: min(410px, 55vw); margin-top: 48px; }
+  .invitation-caption { margin-top: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .invitation-opening .envelope-flap,
+  .invitation-opening .invitation-letter,
+  .invitation-opening .envelope-open { animation: none; }
+}
