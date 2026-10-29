@@ -17,6 +17,6 @@ V repozitáři otevřete **Settings → Pages**, zvolte **Deploy from a branch**
 
 Web používá relativní cesty a funguje také pod cestou repozitáře `/svatba/`. Pracovní štítek je vypnutý. Soubor `.nojekyll` zachovává přímé publikování statických souborů.
 
-**Formulář zatím není aktivní:** jeho přijímací službu je potřeba jednorázově nasadit podle návodu. Do té doby formulář neslibuje úspěšné uložení a odkáže hosty na telefon nebo e-mail.
+**Příjem odpovědí:** adresa nasazené služby Google Apps Script je nastavená v `docs/wedding-config.js`. Odpovědi se zapisují do soukromé Google tabulky. Web potvrdí odeslání až po potvrzení uložení. Postup údržby a opětovného zapojení je v `FORMULAR.md`. Automatické e-maily nejsou zapnuté.
 
 Do tohoto repozitáře nepatří vyplněné odpovědi hostů, přístupové údaje ani obsah soukromé tabulky.
