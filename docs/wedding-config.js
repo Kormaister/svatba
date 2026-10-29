@@ -11,8 +11,8 @@ window.WEDDING = {
   },
   demo: false,
   // Formulář na GitHub Pages ukládá odpovědi přes Google Apps Script.
-  // Po nasazení skriptu doplňte jeho adresu končící /exec.
+  // Veřejná adresa přijímá odpovědi; samotná tabulka zůstává soukromá.
   formTransport: 'apps-script',
   apiBase: '',
-  appsScriptUrl: ''
+  appsScriptUrl: 'https://script.google.com/macros/s/AKfycbyK_st5h-BergKApAMAMFBwkeHPc-H3ndLkImdi8SMjKsShFc4uQcuuP2OiLB1Tux1F/exec'
 };
